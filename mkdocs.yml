@@ -1,0 +1,16 @@
+site_name: Technical Writing Portfolio
+site_author: flareflareflarestar
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: blue
+  features:
+    - navigation.instant
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Samples:
+      - Fix Bad Docs: samples/fix-bad-docs.md
