@@ -18,7 +18,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Samples:
-      - Quickstart Guide: samples/quickstart-guide.md
+      - Quickstart Guide: samples/quickstart-rewrite.md
       - Troubleshooting Guide: samples/troubleshooting-guide-rewrite.md
       - API Reference Rewrite: samples/api-reference-rewrite.md
       - Fix Bad Docs: samples/fix-bad-docs.md
