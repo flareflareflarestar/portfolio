@@ -11,8 +11,10 @@
       
       
       
-        <link rel="prev" href="../datasync-cli-tool/">
+        <link rel="prev" href="../..">
       
+      
+        <link rel="next" href="../datasync-cli-tool/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Fix Bad Docs - Technical Writing Portfolio</title>
+        <title>Troubleshooting API Auth and Sync Issues - Technical Writing Portfolio</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation-guide" class="md-skip">
+        <a href="#troubleshooting-api-auth-and-sync-issues" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fix Bad Docs
+              Troubleshooting API Auth and Sync Issues
             
           </span>
         </div>
@@ -277,10 +279,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../troubleshooting-api-auth-and-sync-issues/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -296,6 +307,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -333,19 +345,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fix-bad-docs/" class="md-nav__link">
         
   
   
@@ -361,7 +364,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -409,36 +411,58 @@
 
 
 
-<h1 id="installation-guide">Installation Guide</h1>
-<p><strong>Prerequisite:</strong> Node.js version 18 or higher.</p>
-<ol>
-<li>Install the package globally by running the following command in your terminal:
-    <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>my-db-cli
-</code></pre></div></li>
-<li>Verify the installation:
-    <div class="highlight"><pre><span></span><code>my-db-cli<span class="w"> </span>--version
-</code></pre></div>
-    If installed successfully, the terminal will display the current version number.</li>
-</ol>
+<blockquote>
+<p><strong>Source text</strong><br />
+If you are getting a 401 Unauthorized error when making requests to the <code>/v1/sync</code> endpoint, there are a few reasons this might happen. First check your API key in the headers. Make sure it has <code>Bearer</code> before it with a space. People forget the space all the time and it breaks. Also check if your key expired. Expired keys give 401s too. You can generate a new one in the developer dashboard under settings -&gt; keys. If you get a 429 Too Many Requests error instead, that means you hit the rate limit. Free tier accounts can only make 60 requests per minute. Paid accounts get 1000/min. If you hit 429 you just have to wait a minute or implement exponential backoff in your code so your application retries automatically after waiting. Sometimes people get 500 Internal Server Error when syncing large payloads over 10MB. The payload size limit isn't explicitly documented everywhere yet but if your JSON payload is too big the server crashes with a 500. Reduce your payload size or split it into chunks of 2MB each. If that still doesn't work, make sure your Content-Type header is set to <code>application/json</code> because if you send plain text or urlencoded data it might throw a 400 Bad Request or a 500 depending on the parser.</p>
+</blockquote>
 <hr />
-<h1 id="obtaining-an-api-key">Obtaining an API Key</h1>
-<p>An API key is required to use our weather service API. You will need a developer account to generate a key. </p>
-<p>If you do not have an account, follow the registration steps below. If you already have an account, skip directly to <a href="#generating-an-api-key">Generating an API key</a>.</p>
-<h2 id="registering-for-an-account">Registering for an Account</h2>
-<ol>
-<li>Fill out the sign-up form on the <strong>Developer Portal</strong>.</li>
-<li>Click the verification link sent to your email to activate your account.</li>
-</ol>
-<h2 id="generating-an-api-key">Generating an API Key</h2>
+<h1 id="troubleshooting-api-auth-and-sync-issues">Troubleshooting API Auth and Sync Issues</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error Code</th>
+<th style="text-align: left;">Possible Causes</th>
+<th style="text-align: left;">Common Solutions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>400 Bad Request</strong></td>
+<td style="text-align: left;">Incorrect <code>Content-Type</code> header</td>
+<td style="text-align: left;">Set <code>Content-Type</code> header to <code>application/json</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>401 Unauthorised</strong></td>
+<td style="text-align: left;">Missing <code>Bearer</code> prefix<br />Expired API key</td>
+<td style="text-align: left;">Include the <code>Bearer</code> prefix<br />Generate new API key</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>429 Too Many Requests</strong></td>
+<td style="text-align: left;">Exceeded rate limit (60/min for free accounts, 1,000/min for paid accounts)</td>
+<td style="text-align: left;">Try again later<br />Implement exponential backoff so application retries automatically after waiting</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>500 Internal Server Error</strong></td>
+<td style="text-align: left;">Payload exceeds size limit (10 MB)<br />Incorrect <code>Content-Type</code> header</td>
+<td style="text-align: left;">Reduce payload size or split into chunks of 2 MB<br />Set <code>Content-Type</code> header to <code>application/json</code></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition tip">
-<p class="admonition-title">Don't lose your API key</p>
-<p>For security reasons, your API key will <strong>only be shown once</strong>. If you lose it, you will need to generate a new key.</p>
+<p class="admonition-title">Rate Limit Best Practice</p>
+<p>Implementing <strong>exponential backoff</strong> helps prevent your application from hitting rate limits repeatedly during peak traffic.</p>
 </div>
-<ol>
-<li>Log in to the <strong>Developer Portal</strong>.</li>
-<li>Navigate to the <strong>Dashboard</strong> and click <strong>Generate Key</strong>.</li>
-<li>Copy the API key and save it somewhere safe (such as a password manager or environment variable). Your key will <strong>never be shown again</strong>.</li>
-</ol>
+<h1 id="retrospective">Retrospective</h1>
+<h2 id="the-challenge">The Challenge</h2>
+<p>The original source documentation provided troubleshooting steps for common API errors as a single dense paragraph. Key information such as causes and solutions were buried in prose, making it difficult for developers to quickly locate solutions.</p>
+<h2 id="key-improvements-made">Key Improvements Made</h2>
+<ul>
+<li>Converted the prose into a structured reference table: Grouped information into three columns to make it easier for developers to directly locate the error they are encountering.</li>
+<li>Standardised action oriented language: Rewrote passive explanations into imperative steps.</li>
+<li>Highlighted critical constraints: Clearly separated distinct root causes to ensure multi-cause errors are easy to diagnose.</li>
+</ul>
+<h2 id="impact">Impact</h2>
+<p>By transforming the narrative text into a compact, scannable table, developer time-to-resolution is significantly reduced.</p>
 
 
 

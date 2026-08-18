@@ -18,6 +18,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Samples:
-      - Troubleshooting API Auth and Sync Issues: samples/troubleshooting-api-auth-and-sync-issues.md
-      - DataSync CLI Tool README: samples/datasync-cli-tool.md
+      - Quickstart Guide: samples/quickstart-guide.md
+      - Troubleshooting Guide: samples/troubleshooting-guide-rewrite.md
       - Fix Bad Docs: samples/fix-bad-docs.md

@@ -11,8 +11,10 @@
       
       
       
-        <link rel="prev" href="../datasync-cli-tool/">
+        <link rel="prev" href="../troubleshooting-api-auth-and-sync-issues/">
       
+      
+        <link rel="next" href="../fix-bad-docs/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Fix Bad Docs - Technical Writing Portfolio</title>
+        <title>DataSync CLI Tool README - Technical Writing Portfolio</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation-guide" class="md-skip">
+        <a href="#datasync-cli-tool-quickstart-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fix Bad Docs
+              DataSync CLI Tool README
             
           </span>
         </div>
@@ -305,10 +307,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../datasync-cli-tool/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DataSync CLI Tool README
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -324,6 +353,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -333,19 +437,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fix-bad-docs/" class="md-nav__link">
         
   
   
@@ -361,7 +456,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -394,6 +488,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -409,36 +566,71 @@
 
 
 
-<h1 id="installation-guide">Installation Guide</h1>
-<p><strong>Prerequisite:</strong> Node.js version 18 or higher.</p>
-<ol>
-<li>Install the package globally by running the following command in your terminal:
-    <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>my-db-cli
-</code></pre></div></li>
-<li>Verify the installation:
-    <div class="highlight"><pre><span></span><code>my-db-cli<span class="w"> </span>--version
-</code></pre></div>
-    If installed successfully, the terminal will display the current version number.</li>
-</ol>
+<blockquote>
+<p><strong>Source text</strong><br />
+DataSync is a fast tool for syncing database tables to local JSON files. It works with PostgreSQL 12+ and MySQL 8.0+. Before installing, make sure you have Python 3.9 or higher installed on your system. You also need <code>pip</code> and Git. To install it, run <code>pip install datasync-cli</code>. If that fails on Linux, you might need <code>sudo apt install libpq-dev</code> first for PostgreSQL drivers. Once installed, you can configure your database connection by running <code>datasync config --db-uri postgresql://user:pass@localhost:5432/dbname</code>. You can also set environment variables like <code>DATASYNC_DB_URI</code> in a <code>.env</code> file if you don't want to use the config command. Features include real-time sync, batch export, and dry-run mode. To test your connection, run <code>datasync test</code>. If it says "Connected successfully", you can run your first sync using <code>datasync run --table users --output users.json</code>. If you get a "Connection refused" error, check if your database server is running on the specified port. For full configuration flags, run <code>datasync --help</code>. License: MIT.</p>
+</blockquote>
 <hr />
-<h1 id="obtaining-an-api-key">Obtaining an API Key</h1>
-<p>An API key is required to use our weather service API. You will need a developer account to generate a key. </p>
-<p>If you do not have an account, follow the registration steps below. If you already have an account, skip directly to <a href="#generating-an-api-key">Generating an API key</a>.</p>
-<h2 id="registering-for-an-account">Registering for an Account</h2>
+<h1 id="datasync-cli-tool-quickstart-guide">DataSync CLI Tool Quickstart Guide</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>DataSync requires Python 3.9 or higher, <code>pip</code>, and Git.</p>
+<h2 id="installation">Installation</h2>
 <ol>
-<li>Fill out the sign-up form on the <strong>Developer Portal</strong>.</li>
-<li>Click the verification link sent to your email to activate your account.</li>
+<li>Run <code>pip install datasync-cli</code>.</li>
 </ol>
-<h2 id="generating-an-api-key">Generating an API Key</h2>
+<h2 id="configuration">Configuration</h2>
 <div class="admonition tip">
-<p class="admonition-title">Don't lose your API key</p>
-<p>For security reasons, your API key will <strong>only be shown once</strong>. If you lose it, you will need to generate a new key.</p>
+<p class="admonition-title">Supported databases</p>
+<p>DataSync supports PostgreSQL 12+, and MySQL 8.0+.</p>
 </div>
 <ol>
-<li>Log in to the <strong>Developer Portal</strong>.</li>
-<li>Navigate to the <strong>Dashboard</strong> and click <strong>Generate Key</strong>.</li>
-<li>Copy the API key and save it somewhere safe (such as a password manager or environment variable). Your key will <strong>never be shown again</strong>.</li>
+<li>Configure the database connection with <code>datasync config --db-uri postgresql://user:pass@localhost:5432/dbname</code>.</li>
+<li>Optionally, set environment variables such as <code>DATASYNC_DB_URI</code> in a <code>.env</code> file.</li>
 </ol>
+<h2 id="testing">Testing</h2>
+<ol>
+<li>Test your database connection with <code>datasync test</code>.</li>
+<li>Run your first sync command: <code>datasync run --table users --output users.json</code>.</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error</th>
+<th style="text-align: left;">Possible Causes</th>
+<th style="text-align: left;">Solutions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Installation failed on Linux</td>
+<td style="text-align: left;">Missing PostgreSQL drivers</td>
+<td style="text-align: left;">Run <code>sudo apt install libpq-dev</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Connection refused</td>
+<td style="text-align: left;">Database server running on incorrect port</td>
+<td style="text-align: left;">Verify the database server is running on port 5432</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Configuration flags</p>
+<p>For a list of all configuration flags, run <code>datasync --help</code>.</p>
+</div>
+<hr />
+<h1 id="retrospective">Retrospective</h1>
+<h2 id="the-challenge">The Challenge</h2>
+<p>The original project README presented setup instructions, environment dependencies, configuration options, and troubleshooting tips in an unstructured paragraph. This made it difficult for developers looking to quickly implement the CLI tool.</p>
+<h2 id="key-improvements-made">Key Improvements Made</h2>
+<ul>
+<li>Structured information: Reorganised the narrative into a logical hierarchy: <strong>Prerequisites</strong>, <strong>Installation</strong>, <strong>Configuration</strong>, <strong>Testing</strong> and <strong>Troubleshooting</strong>.</li>
+<li>Isolated executable commands: Moved CLI commands out of body text and into separate code blocks for easy copying.</li>
+<li>Separated edge cases and help info: Used admonitions to call out supported databases and configuration flags.</li>
+<li>Created a scannable troubleshooting reference: Extracted common setup errors into a table for quick debugging.</li>
+</ul>
+<h2 id="impact">Impact</h2>
+<p>By transforming an unstructured overview into a step-by-step quickstart guide, developers can install and run their first database sync quickly.</p>
 
 
 
