@@ -9,7 +9,7 @@
 2. Verify the installation:
     ```bash
     my-db-cli --version
-    ```
+    ```    
     If installed successfully, the terminal will display the current version number.
 
 ---
@@ -27,7 +27,8 @@ If you do not have an account, follow the registration steps below. If you alrea
 
 ## Generating an API Key
 
-> **IMPORTANT:** For security reasons, your API key will **only be shown once**. If you lose it, you will need to generate a new key.
+!!! tip "Don't lose your API key"
+    For security reasons, your API key will **only be shown once**. If you lose it, you will need to generate a new key.
 
 1. Log in to the **Developer Portal**.
 2. Navigate to the **Dashboard** and click **Generate Key**.

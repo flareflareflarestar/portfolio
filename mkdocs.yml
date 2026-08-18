@@ -10,7 +10,14 @@ theme:
     - navigation.instant
     - content.code.copy
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
 nav:
   - Home: index.md
   - Samples:
+      - Troubleshooting API Auth and Sync Issues: samples/troubleshooting-api-auth-and-sync-issues.md
+      - DataSync CLI Tool README: samples/datasync-cli-tool.md
       - Fix Bad Docs: samples/fix-bad-docs.md
