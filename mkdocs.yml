@@ -1,11 +1,26 @@
-site_name: Technical Writing Portfolio
+site_name: flareflareflarestar
 site_author: flareflareflarestar
 
 theme:
   name: material
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
   palette:
-    primary: indigo
-    accent: blue
+    # Light mode
+    - scheme: default
+      primary: deep-purple
+      accent: deep-purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: deep-purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.instant
     - content.code.copy

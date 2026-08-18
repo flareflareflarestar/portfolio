@@ -1,4 +1,4 @@
-> Source text<br />
+> **Source text**<br />
 > Url is `/api/v2/users` and you have to POST to it. Needs authentication header `Authorization: Bearer <token>`. Don't forget `Content-Type: application/json`. In the request body, `username` is required (string, 3-20 chars). `email` is required too (must be a valid email string). `role` is optional string, defaults to "user", but can be "admin" or "editor". `age` is optional integer, must be between 18 and 120. If it succeeds, it returns `201 Created` with a JSON body that has the newly created `id` (integer), `username`, `email`, `role`, `age`, and `created_at` (ISO 8601 timestamp). If you forget required fields or pass invalid data like age under 18, it gives `400 Bad Request` with `{"error": "Validation failed", "details": "age must be at least 18"}`. If token is missing/invalid, you get `401 Unauthorized` with `{"error": "Invalid token"}`. If email or username is already taken, it throws `409 Conflict` with `{"error": "User already exists"}`.
 
 ---
