@@ -20,4 +20,5 @@ nav:
   - Samples:
       - Quickstart Guide: samples/quickstart-guide.md
       - Troubleshooting Guide: samples/troubleshooting-guide-rewrite.md
+      - API Reference Rewrite: samples/api-reference-rewrite.md
       - Fix Bad Docs: samples/fix-bad-docs.md
