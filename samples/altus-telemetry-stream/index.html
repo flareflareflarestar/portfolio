@@ -11,8 +11,10 @@
       
       
       
-        <link rel="prev" href="../troubleshooting-guide-rewrite/">
+        <link rel="prev" href="../altus-user-guide/">
       
+      
+        <link rel="next" href="../quickstart-rewrite/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>API Reference Rewrite - flareflareflarestar</title>
+        <title>Altus Telemetry Stream - flareflareflarestar</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#endpoint-post-apiv2users" class="md-skip">
+        <a href="#the-altus-telemetry-stream" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Reference Rewrite
+              Altus Telemetry Stream
             
           </span>
         </div>
@@ -360,10 +362,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../altus-telemetry-stream/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Altus Telemetry Stream
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -379,6 +408,120 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-system-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-level System Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingestion-and-api-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestion and API Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-stream-and-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Stream and Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-layer-timescaledb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Layer (TimescaleDB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WebSocket Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow Sequence
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -444,37 +587,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    API Reference Rewrite
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../api-reference-rewrite/" class="md-nav__link">
         
   
   
@@ -490,109 +606,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Headers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#body-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Body Parameters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Responses
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Responses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#201-created" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        201 Created
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#400-bad-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        400 Bad Request
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#401-unauthorized" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        401 Unauthorized
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#409-conflict" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        409 Conflict
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -632,10 +645,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Headers
+        Overview
       
     </span>
   </a>
@@ -643,10 +656,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#body-parameters" class="md-nav__link">
+  <a href="#high-level-system-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Body Parameters
+        High-level System Diagram
       
     </span>
   </a>
@@ -654,22 +667,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
+  <a href="#system-components" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Responses
+        System Components
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Responses">
+    <nav class="md-nav" aria-label="System Components">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#201-created" class="md-nav__link">
+  <a href="#ingestion-and-api-gateway" class="md-nav__link">
     <span class="md-ellipsis">
       
-        201 Created
+        Ingestion and API Gateway
       
     </span>
   </a>
@@ -677,10 +690,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#400-bad-request" class="md-nav__link">
+  <a href="#event-stream-and-processing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        400 Bad Request
+        Event Stream and Processing
       
     </span>
   </a>
@@ -688,10 +701,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#401-unauthorized" class="md-nav__link">
+  <a href="#storage-layer-timescaledb" class="md-nav__link">
     <span class="md-ellipsis">
       
-        401 Unauthorized
+        Storage Layer (TimescaleDB)
       
     </span>
   </a>
@@ -699,10 +712,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#409-conflict" class="md-nav__link">
+  <a href="#websocket-gateway" class="md-nav__link">
     <span class="md-ellipsis">
       
-        409 Conflict
+        WebSocket Gateway
       
     </span>
   </a>
@@ -711,6 +724,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow Sequence
+      
+    </span>
+  </a>
   
 </li>
       
@@ -731,112 +755,34 @@
 
 
 
-<blockquote>
-<p><strong>Source text</strong><br />
-Url is <code>/api/v2/users</code> and you have to POST to it. Needs authentication header <code>Authorization: Bearer &lt;token&gt;</code>. Don't forget <code>Content-Type: application/json</code>. In the request body, <code>username</code> is required (string, 3-20 chars). <code>email</code> is required too (must be a valid email string). <code>role</code> is optional string, defaults to "user", but can be "admin" or "editor". <code>age</code> is optional integer, must be between 18 and 120. If it succeeds, it returns <code>201 Created</code> with a JSON body that has the newly created <code>id</code> (integer), <code>username</code>, <code>email</code>, <code>role</code>, <code>age</code>, and <code>created_at</code> (ISO 8601 timestamp). If you forget required fields or pass invalid data like age under 18, it gives <code>400 Bad Request</code> with <code>{"error": "Validation failed", "details": "age must be at least 18"}</code>. If token is missing/invalid, you get <code>401 Unauthorized</code> with <code>{"error": "Invalid token"}</code>. If email or username is already taken, it throws <code>409 Conflict</code> with <code>{"error": "User already exists"}</code>.</p>
-</blockquote>
-<hr />
-<h1 id="endpoint-post-apiv2users">Endpoint: <code>POST /api/v2/users</code></h1>
-<h2 id="headers">Headers</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Header</th>
-<th style="text-align: left;">Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>Authorization: Bearer &lt;token&gt;</code></td>
-<td style="text-align: left;">mandatory</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>Content-Type: application/json</code></td>
-<td style="text-align: left;">mandatory</td>
-</tr>
-</tbody>
-</table>
-<h2 id="body-parameters">Body Parameters</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Required</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>username</code></td>
-<td style="text-align: left;">String (3-20 chars)</td>
-<td style="text-align: left;">mandatory</td>
-<td style="text-align: left;">Used for user profile</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>email</code></td>
-<td style="text-align: left;">String (valid email)</td>
-<td style="text-align: left;">mandatory</td>
-<td style="text-align: left;">Used for log in and notifications</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>role</code></td>
-<td style="text-align: left;">String ("user", "admin", or "editor")</td>
-<td style="text-align: left;">optional (defaults "user")</td>
-<td style="text-align: left;">Enables specific features and privileges</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>age</code></td>
-<td style="text-align: left;">Integer (between 18 and 120)</td>
-<td style="text-align: left;">optional</td>
-<td style="text-align: left;">For data collection purposes</td>
-</tr>
-</tbody>
-</table>
-<h2 id="responses">Responses</h2>
-<h3 id="201-created">201 Created</h3>
-<p>User profile successfully created. An example payload returned: 
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"flareflareflarestar"</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"flare@st.ar"</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">69</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-18T06:58:05-06:00"</span>
-<span class="w">    </span><span class="p">}</span>
-</code></pre></div></p>
-<h3 id="400-bad-request">400 Bad Request</h3>
-<p>Invalid data passed. Returns:
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Validation failed"</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">"details"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Age must be at least 18"</span>
-
-<span class="w">    </span><span class="p">}</span>
-</code></pre></div></p>
-<h3 id="401-unauthorized">401 Unauthorized</h3>
-<p>Missing or invalid token. Returns:
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invalid token"</span>
-<span class="w">    </span><span class="p">}</span>
-</code></pre></div></p>
-<h3 id="409-conflict">409 Conflict</h3>
-<p>Username or email already taken. Returns:
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User already exists"</span>
-<span class="w">    </span><span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<h1 id="retrospective">Retrospective</h1>
-<h2 id="the-challenge">The Challenge</h2>
-<p>The original endpoint specifications were provided as unstructured, raw developer notes. Crucial integration details such as request parameters, mandatory headers, default values, constraint boundaries, and error schemas were embedded in narrative text, making it time consuming for developers to construct valid API requests.</p>
-<h2 id="key-improvements-made">Key Improvements Made</h2>
-<ul>
-<li>Standardised endpoint layout: Adopted a RESTful API documentation layout with clear visual hierarchy.</li>
-<li>Structured parameter schema: Created concise tables for request headers and request parameters detailing data types, constraints, and default behaviours.</li>
-<li>Formatted JSON payloads: Provided clear examples of successful responses and error scenarios aiding developers in debugging and testing.</li>
-</ul>
-<h2 id="impact">Impact</h2>
-<p>By standardising the endpoint reference, developers can quickly integrate the API, construct valid requests, and correctly handle error scenarios without needing to consult backend engineers.</p>
+<h1 id="the-altus-telemetry-stream">The Altus Telemetry Stream</h1>
+<h2 id="overview">Overview</h2>
+<p>The Altus Telemetry Stream is a system that ingests real-time position data from aircraft and displays live updates on an operational dashboard. Ground stations capture raw ADS-B signals from aircraft transponders and forward telemetry packets to a dedicated streaming pipeline for parsing, validation, normalisation, and long-term storage. Through a low-latency WebSocket gateway, the location data is broadcast directly to the web and mobile client.</p>
+<h2 id="high-level-system-diagram">High-level System Diagram</h2>
+<pre class="mermaid"><code>    flowchart LR
+    A[Aircraft Transponder] --&gt;|ADS-B Signal| B[Ground Station]
+    B --&gt;|Raw JSON| C[API Gateway]
+    C --&gt; D[Kafka Stream Processor]
+    D --&gt; E[(TimescaleDB)]
+    D --&gt; F[WebSocket Gateway]
+    F --&gt;|Live Coordinates| G[Web &amp; Mobile Dashboard]</code></pre>
+<h2 id="system-components">System Components</h2>
+<h3 id="ingestion-and-api-gateway">Ingestion and API Gateway</h3>
+<p>Ground stations capture raw ADS-B signals from aircraft transponders, format the telemetry into JSON and forward the payload to the API Gateway. The API Gateway handles authenticating requests and the initial payload validation before passing data downstream.</p>
+<h3 id="event-stream-and-processing">Event Stream and Processing</h3>
+<p>Apache Kafka buffers incoming raw telemetry. Stream processing workers consume these events to validate, filter, and normalise spatial data fields (latitude, longitude, altitude, and airspeed) into a standardised format.</p>
+<h3 id="storage-layer-timescaledb">Storage Layer (TimescaleDB)</h3>
+<p>Normalised telemetry events are persisted to a time-series database optimised for high-write throughput. This layer provides historical route logging, audit compliance, and retrospective flight path analysis.</p>
+<h3 id="websocket-gateway">WebSocket Gateway</h3>
+<p>Normalised telemetry events are routed to a WebSocket Gateway that manages persistent, low-latency client connections. The gateway pushes live position updates directly to active web and mobile interfaces.</p>
+<h2 id="data-flow-sequence">Data Flow Sequence</h2>
+<ol>
+<li><strong>Emission:</strong> Aircraft transmits an ADS-B positional signal over 1090 MHz.</li>
+<li><strong>Capture and Ingestion:</strong> A ground receiver station captures the signal, formats it as a JSON payload, and posts it to the Atus API Gateway via HTTPS.</li>
+<li><strong>Validation and Processing:</strong> The API Gateway validates authentication headers, then routes the raw payload to Apache Kafka. Stream workers parse and normalise spatial coordinates and telemetry attributes.</li>
+<li><strong>Persistence:</strong> The processed telemetry event is stored in TimescaleDB for auditing compliance and analytical queries.</li>
+<li><strong>Real-Time Broadcast:</strong> Simultaneously, the event is routed to the WebSocket Gateway, which broadcasts the updated coordinates to all client map dashboards.</li>
+</ol>
 
 
 
