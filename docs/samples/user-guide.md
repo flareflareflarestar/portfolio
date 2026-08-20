@@ -36,12 +36,16 @@ Using Altus, flight planners can quickly set up new flight routes that can be sc
 ### Step 2: Review and Activate
 
 1. Review the flight details and update any incorrect information.
+
 !!! info "Complementary Return Routes"
     If the route is set to **Return**, Altus will automatically generate a paired return route with reversed airports and waypoints.
+
 2. Click **Confirm New Route**.
-2. Navigate to **Flight Management** > **View Routes** > **Inactive**.
+3. Navigate to **Flight Management** > **View Routes** > **Inactive**.
+
 !!! info "Default Status"
     New routes are set to "*Inactive** by default to prevent unauthorised or premature flight scheduling.
+
 4. Locate your newly created route and click **Activate Route**.
 
 ---
