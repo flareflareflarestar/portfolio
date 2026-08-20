@@ -19,8 +19,8 @@ Explore a selection of my technical writing samples below:
 ## Technical Skills & Tools
 
 - **Documentation standards:** Docs-as-Code, API reference specs, Markdown, troubleshooting guides
-- **Tools and Platforms:** Git, GitHub, MkDocs, VS Code
-- **Domain Focus:** Aviation technology, developer documentation, user guides
+- **Tools and platforms:** Git, GitHub, MkDocs, VS Code
+- **Domain focus:** Aviation technology, developer documentation, user guides
 
 ---
 

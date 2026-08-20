@@ -34,6 +34,7 @@ nav:
   - Home: index.md
   - About: about.md
   - Samples:
+      - User Guide: samples/user-guide.md
       - Quickstart Guide: samples/quickstart-rewrite.md
       - Troubleshooting Guide: samples/troubleshooting-guide-rewrite.md
       - API Reference Rewrite: samples/api-reference-rewrite.md

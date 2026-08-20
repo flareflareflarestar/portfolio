@@ -76,7 +76,7 @@ The original endpoint specifications were provided as unstructured, raw develope
 
 ## Key Improvements Made
 
-- Standardised endpoint layout: Adopted a RESTful API documentation layour with clear visual hierarchy.
+- Standardised endpoint layout: Adopted a RESTful API documentation layout with clear visual hierarchy.
 - Structured parameter schema: Created concise tables for request headers and request parameters detailing data types, constraints, and default behaviours.
 - Formatted JSON payloads: Provided clear examples of successful responses and error scenarios aiding developers in debugging and testing.
 
