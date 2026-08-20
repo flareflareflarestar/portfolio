@@ -4,15 +4,15 @@
 
 ---
 
-## A Selection of Samples
+## Writing Samples
 
 Explore a selection of my technical writing samples below:
 
 | Sample | Type | Description |
 |:--|:---|:---|
-| [**Troubleshooting Guide**](samples/troubleshooting-guide-rewrite.md) | Reference Guide | Structured debugging table resolving common API errors. |
-| [**Quickstart Guide**](samples/quickstart-rewrite.md) | Readme | Step-by-step installation and configuration guide for a developer CLI tool. |
-| [**API Reference**](samples/api-reference-rewrite.md) | API Documentation | REST API endpoint reference featuring request body schemas, parameters, and JSON payloads. |
+| [**Altus User Guide**](samples/altus-user-guide.md) | Reference Guide | Step-by-step instructions for a flight management feature. |
+| [**Quickstart Guide Rewrite**](samples/quickstart-rewrite.md) | Readme | Step-by-step installation and configuration guide for a developer CLI tool. |
+| [**API Reference Rewrite**](samples/api-reference-rewrite.md) | API Documentation | REST API endpoint reference featuring request body schemas, parameters, and JSON payloads. |
 
 ---
 

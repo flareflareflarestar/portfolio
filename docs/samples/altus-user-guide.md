@@ -1,4 +1,4 @@
-# User Guide: Setting Up a New Flight Route
+# Altus User Guide: Setting Up a New Flight Route
 
 ## Overview
 
@@ -44,7 +44,7 @@ Using Altus, flight planners can quickly set up new flight routes that can be sc
 3. Navigate to **Flight Management** > **View Routes** > **Inactive**.
 
     !!! info "Default Status"
-        New routes are set to "*Inactive** by default to prevent unauthorised or premature flight scheduling.
+        New routes are set to **Inactive** by default to prevent unauthorised or premature flight scheduling.
 
 4. Locate your newly created route and click **Activate Route**.
 
